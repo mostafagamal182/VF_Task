@@ -1,0 +1,4 @@
+Steps\CommonSteps.class
+Steps\StepDef.class
+Rest\JsonPlaceHolder.class
+TestRunner\TestRunner.class
