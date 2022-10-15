@@ -1,9 +1,9 @@
 Feature: User open link then go to card then check item
 
   Scenario:User navigate to amazon page and add item to cart
-    Given User on Amazon page
-    When User type and search for 'car accessories'
-    Then User Search and select second available item on the menu
+    Given user open twitter link
+    When User type Gmail on login page 'Ahmed122@gmail.com'
+    Then User click next button
     And User Added item to the cart
     And Text Appears 'Added to Cart' expected to be Text Appears Added to Cart
 

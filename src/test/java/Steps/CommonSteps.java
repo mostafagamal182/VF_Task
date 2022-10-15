@@ -20,17 +20,17 @@ public class CommonSteps {
           driver = new ChromeDriver();
     }
 
-    @After
-    public void teardown(Scenario scenario) throws InterruptedException {
-        if(scenario.isFailed()){
-//Takes a screenshot
-            final byte[] scr=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(scr,"image/png", scenario.getName());
-        }
-        driver.quit();
-        Thread.sleep(1000 );
-
-    }
+//    @After
+//    public void teardown(Scenario scenario) throws InterruptedException {
+//        if(scenario.isFailed()){
+////Takes a screenshot
+//            final byte[] scr=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+//            scenario.attach(scr,"image/png", scenario.getName());
+//        }
+//        driver.quit();
+//        Thread.sleep(1000 );
+//
+//    }
 
 
     public WebDriver getDriver(){

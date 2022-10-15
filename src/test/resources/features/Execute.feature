@@ -1,15 +1,30 @@
-Feature: User open link then go to card then check item
+Feature: User open twitter then try to login
 
   Scenario:User navigate to amazon page and add item to cart
-    Given User on Amazon page
-    When User type and search for 'car accessories'
-    Then User Search and select second available item on the menu
-    And User Added item to the cart
-    And Text Appears 'Added to Cart' expected to be Text Appears Added to Cart
+    Given user open twitter link
+    When User type valid Email on login page 'Mahmoud3333@gmail.com'
+    Then User click next button
+    And User enter valid password in password field
+    And Click on Login button
 
 
-Scenario: User open today's deals and select items
-  Given User open today's deals
-  When Select from left side filter two elements
-  And User Select discount 10% off or more
-  And User go to fourth page and select any item and add it to the cart
+  Scenario:User navigate to amazon page and add item to cart
+    Given user open twitter link
+    When User type invalid Email on login page 'Mahmoud3'
+    Then User click next button
+    And User enter valid password in password field
+    And Click on Login button
+
+  Scenario:User navigate to amazon page and add item to cart
+    Given user open twitter link
+    When User type valid Email on login page 'Mahmoud3333@gmail.com'
+    Then User click next button
+    And User enter invalid password in password field
+    And Click on Login button
+
+  Scenario:User navigate to amazon page and add item to cart
+    Given user open twitter link
+    When User type invalid Email on login page 'Mahmoud3'
+    Then User click next button
+    And User enter invalid password in password field
+    And Click on Login button
